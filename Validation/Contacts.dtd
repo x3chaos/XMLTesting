@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!ELEMENT Contacts (Contact+)>
-<!ELEMENT Contact (Name, Birthdate?, URL?, Bio?)>
+<!ELEMENT Contact (Name, Username, Birthdate?, URL?, Bio?)>
+<!ELEMENT Name (#PCDATA)>
+<!ELEMENT Username (#PCDATA)
 <!ELEMENT Birthdate ((Month, Day, Year?) | (Day, Month, Year?))>
 <!ATTLIST Birthdate
 	display (all|month-day|month|year|none) "month-day" >
-<!ELEMENT Name (#PCDATA)>
 <!ELEMENT Bio (#PCDATA)>
 <!ELEMENT Month (#PCDATA)>
 <!ELEMENT Day (#PCDATA)>
