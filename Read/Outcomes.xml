@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Outcomes PUBLIC "Outcomes" "Outcomes.dtd">
+<Outcomes>
+
+	<!-- Default options -->
+	<DefaultOptions>
+		<Cooldown>10</Cooldown>
+		<Broadcast>true</Broadcast>
+		<Message>$player rolled for $outcomeName!</Message>
+	</DefaultOptions>
+
+	<!-- Outcomes below -->
+
+	<Outcome name="foo">
+		<Options>
+			<Cooldown>5</Cooldown>
+			<Broadcast>false</Broadcast>
+		</Options>
+
+		<Command src="self">kill</Command>
+		<Command src="console">haha $player died u fag bich loool</Command>
+	</Outcome>
+
+	<Outcome name="bar">
+		<Options>
+			<Cooldown>20</Cooldown>
+		</Options>
+
+		<Command src="console">give $player diamond 1</Command>
+	</Outcome>
+
+	<Outcome name="baz">
+		<Options>
+			<Message>$player teleported to someone random!</Message>
+		</Options>
+
+		<Command src="console">tp $player $rPlayer</Command>
+		<Command src="console">tell $player where did you go</Command>
+	</Outcome>
+
+</Outcomes>

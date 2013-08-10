@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT Outcomes (DefaultOptions, Outcome*)>
+
+<!ELEMENT DefaultOptions (Cooldown, Broadcast, Message)>
+<!ELEMENT Cooldown (#PCDATA)>
+<!ELEMENT Broadcast (#PCDATA)>
+<!ELEMENT Message (#PCDATA)>
+
+<!ELEMENT Outcome (Options?, Command+)>
+<!ELEMENT Options (Cooldown*, Broadcast*, Message*)>
+<!ELEMENT Command (#PCDATA)>
+<!ATTLIST Command
+	src (self|console) #REQUIRED
+>
